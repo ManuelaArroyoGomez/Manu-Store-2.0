@@ -3,11 +3,12 @@ import { Product } from '../../models/product.model'
 import { CommonModule } from '@angular/common'
 
 import { AppComponent } from './../../app.component'
+import { ImgComponent } from "../img/img.component";
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, AppComponent],
+  imports: [CommonModule, AppComponent, ImgComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })
