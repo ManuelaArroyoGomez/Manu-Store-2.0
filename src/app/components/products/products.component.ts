@@ -18,6 +18,8 @@ export class ProductsComponent {
 
   myShoppingCart: Product[] = [];
   total = 0;
+  today = new Date();
+  date = new  Date(2021,1,21);
 
   // products: Product[] = []
 
