@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnChanges, OnInit, AfterViewInit, OnDestroy, SimpleChanges } from '@angular/core';
+
 import { CommonModule } from '@angular/common'
 
 @Component({
@@ -18,6 +19,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
     console.log('change just img => ', this.img)
     // code
   }
+
   @Input() alt: string = '';
   @Output() loaded = new EventEmitter<string>();
   imageDefault = 'assets/images/default.png';
