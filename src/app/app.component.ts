@@ -8,11 +8,12 @@ import { CommonModule } from '@angular/common';
 
 import { Product } from './models/product.model'
 import { ProductsComponent } from "./components/products/products.component";
+import { NavComponent } from "./components/nav/nav.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ImgComponent, FormsModule, ProductComponent, CommonModule, ProductsComponent],
+  imports: [RouterOutlet, ImgComponent, FormsModule, ProductComponent, CommonModule, ProductsComponent, NavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
