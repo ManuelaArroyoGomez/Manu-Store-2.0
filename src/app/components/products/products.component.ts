@@ -3,14 +3,13 @@ import { CommonModule } from '@angular/common'
 
 import { Product } from '../../models/product.model'
 import { ProductComponent } from "../product/product.component";
-import { ProductsService } from '../../services/products.service';
-
+import { HighlightDirective } from '../../directives/highlight.directive';
 import { StoreService } from '../../services/store.service'
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [ProductComponent, CommonModule],
+  imports: [ProductComponent, CommonModule, HighlightDirective],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })

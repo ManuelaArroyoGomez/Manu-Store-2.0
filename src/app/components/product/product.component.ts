@@ -6,10 +6,12 @@ import { TimeAgoPipe } from '../../pipe/time-ago.pipe';
 import { AppComponent } from './../../app.component'
 import { ImgComponent } from "../img/img.component";
 
+import { HighlightDirective } from '../../directives/highlight.directive';
+
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, AppComponent, ImgComponent, TimeAgoPipe],
+  imports: [CommonModule, AppComponent, ImgComponent, TimeAgoPipe, HighlightDirective],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
 })
