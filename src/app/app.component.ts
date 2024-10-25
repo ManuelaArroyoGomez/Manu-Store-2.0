@@ -6,7 +6,6 @@ import { ProductComponent } from "./components/product/product.component";
 
 import { CommonModule } from '@angular/common';
 
-import { Product } from './models/product.model'
 import { ProductsComponent } from "./components/products/products.component";
 import { NavComponent } from "./components/nav/nav.component";
 

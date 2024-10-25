@@ -1,3 +1,45 @@
 p, h2 {
-  margin: 0;
+    margin: 0;
+    padding: 5px 10px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+p {
+  font-weight: 500;
+}
+
+div {
+  display: flex;             /* Usar Flexbox para centrar */
+  justify-content: center;   /* Centrar horizontalmente */
+  align-items: center;       /* Centrar verticalmente */
+  button {
+    margin: 8px 0;
+
+    background-color: rgb(255, 199, 233); /* Color de fondo (verde suave) */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 12px 24px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+
+    &:hover {
+      background-color: pink; /* Color de fondo más oscuro en hover */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra en hover */
+    }
+
+    &.active {
+      background-color: pink; /* Color más oscuro al hacer clic */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Reducir la sombra al hacer clic */
+      transform: scale(0.97); /* Reducir ligeramente el tamaño al hacer clic */
+  }
+
+  }
 }
