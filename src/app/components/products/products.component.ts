@@ -13,6 +13,9 @@ import { ProductComponent } from "../product/product.component";
 })
 export class ProductsComponent {
 
+  myShoppingCart: Product[] = [];
+  total = 0;
+
   products: Product[] = [
     {
       id: '1',
@@ -66,4 +69,9 @@ export class ProductsComponent {
       image: 'assets/images/product8.jpg',
     }
   ];
+
+  onAddToShoppingCart(product: Product) {
+    this.myShoppingCart.push(product);
+    this.total = this.myShoppingCart.reduce((sum, ClipboardItem) => sum + ClipboardItem.price, 0);
+  }
 }
