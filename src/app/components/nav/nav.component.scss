@@ -97,6 +97,25 @@
   }
 }
 
+.shopping-cart-container {
+  position: relative;
+  display: block;
+  .counter {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    background-color: pink;
+  }
+}
+
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .show-mobile {
