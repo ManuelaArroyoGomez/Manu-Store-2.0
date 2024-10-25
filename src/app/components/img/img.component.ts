@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common'
 export class ImgComponent {
   @Input() img: string = '';
   @Output() loaded = new EventEmitter<string>();
-  imageDefault = '../../../assets/images/default.png';
+  imageDefault = 'assets/images/default.png';
 
   imgError() {
     //interno
