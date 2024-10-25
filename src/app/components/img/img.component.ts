@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnChanges, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, OnInit, AfterViewInit, OnDestroy, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common'
 
 @Component({
@@ -9,26 +9,41 @@ import { CommonModule } from '@angular/common'
   styleUrl: './img.component.scss'
 })
 export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy{
-  @Input() img: string = '';
+
+  img: string = '';
+
+  @Input('img')
+  set changeImg(newImg: string) {
+    this.img = newImg;
+    console.log('change just img => ', this.img)
+    // code
+  }
+  @Input() alt: string = '';
   @Output() loaded = new EventEmitter<string>();
   imageDefault = 'assets/images/default.png';
+  counter = 0;
+  counterFn: number | undefined;
 
   constructor() {
     //before render, NO ASYNC, only one time
     console.log('constructor', 'imgValue =>', this.img)
   }
 
-  ngOnChanges() {
+  ngOnChanges(changes: SimpleChanges) {
     //before render
     //changes inputs -- times
-    console.log('ngOnChanges', 'imgValue =>' , this.img)
-
+    console.log('ngOnChanges', 'imgValue =>' , this.img);
+    console.log('changes', changes);
   }
 
   ngOnInit(): void {
     //befor render
     // ASYNC - fetch - promise --one time
-    console.log('ngOnInit', 'imgValue =>' , this.img)
+    console.log('ngOnInit', 'imgValue =>' , this.img);
+    this.counterFn = window.setInterval(() => {
+      this.counter += 1;
+      console.log('run counter');
+    },1000);
   }
 
   ngAfterViewInit() {
@@ -40,6 +55,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   ngOnDestroy() {
     //delete
     console.log('ngOnDestroy')
+    clearInterval(this.counterFn);
   }
 
   imgError() {
