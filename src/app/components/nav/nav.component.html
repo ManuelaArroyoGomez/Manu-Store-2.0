@@ -1,15 +1,25 @@
 <div class="show-mobile">
   <div>
-    <button>
+    <button (click)="toogleMenu()">
       <img src="assets/icons/menu-hamburguesa.svg" alt="menu">
     </button>
     <a class="logo" href="">
-      <img src="./../../../assets/images/logo.jpg" alt="logo">
-      <p>Store Manu</p>
+        <img src="./../../../assets/images/logo.jpg" alt="logo">
+        <p>Store Manu</p>
     </a>
     <a href="">
       <img src="assets/icons/carrito-de-compras.svg" alt="cart">
     </a>
+  </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <button (click)="toogleMenu()">
+      <img src="assets/icons/cruz.svg" alt="">
+    </button>
+    <ul>
+      <li><a href="">All</a></li>
+      <li><a href="">Clothes</a></li>
+      <li><a href="">Electronics</a></li>
+    </ul>
   </div>
 </div>
 <div class="hide-mobile">
